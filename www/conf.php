@@ -8,7 +8,7 @@ $mdp = 'root';
 //tentative de connexion à MySQL via PDO
 try
 {
-    $bdd = new PDO('mysql:host='.$serveur.';dbname='.$nomBD.';charset=utf8', $login, $mdp);
+    $conn = new PDO('mysql:host='.$serveur.';dbname='.$nomBD.';charset=utf8', $login, $mdp);
 }
 catch (Exception $e)
 {
@@ -37,5 +37,17 @@ function debug(){
         else echo $var.$saut_ligne;
     }
     echo '</div>'."\n";
+}
+
+function affichage($donnees)
+{
+    echo '<div>';
+    echo '<img src="' . $donnees['path_to_image'] . '.jpg"/>';
+    echo '<h1>' . $donnees['titre'] . '<h1/>';
+    echo $donnees['description'];
+    echo $donnees['auteur'];
+    echo $donnees['nb_pages'];
+    echo $donnees['resume'];
+    echo '</div>';
 }
 ?>

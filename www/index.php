@@ -12,9 +12,9 @@
         </div>
         <div id="menu">
             <ul id="onglets">
-                <li><a href="index.php?a=lister">Liste des Pokémons</a></li>
-                <li><a href="index.php?a=rechercher">Rechercher un Pokémon</a></li>
-                <li><a href="index.php?a=ajouter">Ajouter un Pokémon</a></li>
+                <li><a href="index.php?a=lister">Liste des bd</a></li>
+                <li><a href="index.php?a=rechercher">Rechercher une bd</a></li>
+                <li><a href="index.php?a=ajouter">Ajouter une bd</a></li>
             </ul>
         </div>
         <div id="page">
