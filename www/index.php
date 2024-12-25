@@ -1,7 +1,7 @@
 <html lang="fr">
     <head>
         <title>Bd Manager</title>
-        <link rel="icon" type="image/png" href="bd.png">
+        <link rel="icon" type="image/png" href="../bd.png">
     </head>
     <body>
         <?php

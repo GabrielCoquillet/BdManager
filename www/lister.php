@@ -7,4 +7,5 @@
         echo $donnees['description'];
         echo $donnees['auteur'];
         echo $donnees['nb_pages'];
+        echo $donnees['resume'];
     }
