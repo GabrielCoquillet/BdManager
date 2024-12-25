@@ -4,6 +4,9 @@
         <link rel="icon" type="image/png" href="bd.png">
     </head>
     <body>
+        <?php
+            include 'conf.php';
+        ?>
         <div id="titre">
             <h1>Bd Manager</h1>
         </div>
