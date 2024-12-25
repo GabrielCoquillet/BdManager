@@ -37,11 +37,14 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="1101" y="402" name="bd">
+</datatypes><table x="803" y="202" name="bd">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER</datatype>
 </row>
 <row name="titre" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="auteur" null="1" autoincrement="0">
 <datatype>VARCHAR(50)</datatype>
 <default>NULL</default></row>
 <row name="resume" null="1" autoincrement="0">
@@ -49,9 +52,6 @@
 <default>NULL</default></row>
 <row name="numero_tome" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="path_to_image" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
 <default>NULL</default></row>
 <row name="annee" null="1" autoincrement="0">
 <datatype>INTEGER(4)</datatype>
@@ -62,64 +62,11 @@
 <row name="nb_pages" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="500" y="351" name="auteur">
-<row name="id" null="0" autoincrement="1">
-<datatype>INTEGER</datatype>
-</row>
-<row name="nom" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<row name="prenom" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<row name="ddn" null="1" autoincrement="0">
-<datatype>INTEGER(4)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="501" y="202" name="nationalite">
-<row name="id" null="0" autoincrement="1">
-<datatype>INTEGER</datatype>
-</row>
-<row name="nom" null="1" autoincrement="0">
+<row name="path_to_image" null="1" autoincrement="0">
 <datatype>VARCHAR(50)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
-</key>
-</table>
-<table x="800" y="272" name="link_nationalite">
-<row name="id_nationalite" null="0" autoincrement="0">
-<datatype>INTEGER</datatype>
-<relation table="nationalite" row="id" />
-</row>
-<row name="id_auteur" null="0" autoincrement="0">
-<datatype>INTEGER</datatype>
-<relation table="auteur" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id_nationalite</part>
-<part>id_auteur</part>
-</key>
-</table>
-<table x="801" y="401" name="link_auteur">
-<row name="id_bd" null="0" autoincrement="0">
-<datatype>INTEGER</datatype>
-<relation table="bd" row="id" />
-</row>
-<row name="id_auteur" null="0" autoincrement="0">
-<datatype>INTEGER</datatype>
-<relation table="auteur" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id_auteur</part>
-<part>id_bd</part>
 </key>
 </table>
 </sql>
