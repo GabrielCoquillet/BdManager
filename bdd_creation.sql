@@ -82,10 +82,10 @@ CREATE TABLE `link_auteur` (
 -- Foreign Keys 
 -- ---
 
-ALTER TABLE `link_nationalite` ADD FOREIGN KEY (id_nationalite) REFERENCES `nationalite` (`id`);
-ALTER TABLE `link_nationalite` ADD FOREIGN KEY (id_auteur) REFERENCES `auteur` (`id`);
-ALTER TABLE `link_auteur` ADD FOREIGN KEY (id_bd) REFERENCES `bd` (`id`);
-ALTER TABLE `link_auteur` ADD FOREIGN KEY (id_auteur) REFERENCES `auteur` (`id`);
+ALTER TABLE `link_nationalite` ADD FOREIGN KEY (id_nationalite) REFERENCES `nationalite` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `link_nationalite` ADD FOREIGN KEY (id_auteur) REFERENCES `auteur` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `link_auteur` ADD FOREIGN KEY (id_bd) REFERENCES `bd` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `link_auteur` ADD FOREIGN KEY (id_auteur) REFERENCES `auteur` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- ---
 -- Table Properties
