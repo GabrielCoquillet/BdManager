@@ -1,0 +1,2 @@
+# BdManager
+Simple bd manager
